@@ -78,13 +78,15 @@ body {
     text-align: center;
   }
   
-  footer {
+ /* src/style.css */
+/* ... (previous styles) */
+
+footer {
     text-align: center;
     padding: 10px;
     background-color: #333;
     color: white;
-    position: fixed;
-    bottom: 0;
     width: 100%;
   }
+  
   
