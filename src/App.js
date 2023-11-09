@@ -20,7 +20,7 @@ const App = () => {
 
   const applyFilters = () => {
     // Logic to filter catData based on minWidth and minHeight
-    // Update the state with the filtered data
+    
   };
 
   return (
