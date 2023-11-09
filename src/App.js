@@ -19,8 +19,6 @@ const App = () => {
   }, []); // Fetch images only once when the component mounts
 
   const applyFilters = () => {
-    // Logic to filter catData based on minWidth and minHeight
-    
   };
 
   return (
