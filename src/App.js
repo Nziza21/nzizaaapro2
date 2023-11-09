@@ -1,15 +1,37 @@
 // src/App.js
-import React, { useState } from 'react';
-import header from './components/header';
+import React, { useState, useEffect } from 'react';
+import Header from './components/Header';
+import Filters from './components/Filters';
+import Gallery from './components/Gallery';
+import Footer from './components/Footer';
 
 const App = () => {
   const [minWidth, setMinWidth] = useState('');
   const [minHeight, setMinHeight] = useState('');
   const [catData, setCatData] = useState([]);
 
+  useEffect(() => {
+    // Fetch cat images from the API
+    fetch('https://api.thecatapi.com/v1/images/search?format=json&limit=10')
+      .then((response) => response.json())
+      .then((data) => {
+        setCatData(data);
+      })
+      .catch((error) => {
+        console.error('Error fetching cat images:', error);
+      });
+  }, []);
+
   const applyFilters = () => {
-    // Logic to filter catData based on minWidth and minHeight
-    // Update the state with the filtered data
+    // Filter catData based on minWidth and minHeight
+    const filteredCats = catData.filter((cat) => {
+      const catWidth = parseInt(cat.width);
+      const catHeight = parseInt(cat.height);
+
+      return (!minWidth || catWidth >= parseInt(minWidth)) && (!minHeight || catHeight >= parseInt(minHeight));
+    });
+
+    setCatData(filteredCats);
   };
 
   return (
