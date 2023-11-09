@@ -4,7 +4,6 @@ import Header from './components/Header';
 import Filters from './components/Filters';
 import Gallery from './components/Gallery';
 import Footer from './components/Footer';
-import './style.css'; // Import the CSS file
 
 const App = () => {
   const [minWidth, setMinWidth] = useState('');
@@ -12,32 +11,12 @@ const App = () => {
   const [catData, setCatData] = useState([]);
 
   useEffect(() => {
-    // Function to update the position of the footer
-    const updateFooterPosition = () => {
-      const footer = document.querySelector('footer');
-      const gallery = document.querySelector('#gallery');
-      const windowHeight = window.innerHeight;
-
-      if (footer && gallery) {
-        const galleryBottom = gallery.offsetTop + gallery.clientHeight;
-
-        if (galleryBottom < windowHeight) {
-          footer.style.position = 'fixed';
-          footer.style.bottom = '0';
-        } else {
-          footer.style.position = 'relative';
-        }
-      }
-    };
-
-    // Attach the function to the scroll event
-    window.addEventListener('scroll', updateFooterPosition);
-
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener('scroll', updateFooterPosition);
-    };
-  }, [catData]); // Update the position when catData changes
+    // Fetch cat images from the API
+    fetch('https://api.thecatapi.com/v1/images/search?format=json&limit=10')
+      .then((response) => response.json())
+      .then((data) => setCatData(data))
+      .catch((error) => console.error('Error fetching cat images:', error));
+  }, []); // Fetch images only once when the component mounts
 
   const applyFilters = () => {
     // Logic to filter catData based on minWidth and minHeight
@@ -54,7 +33,7 @@ const App = () => {
         setMinHeight={setMinHeight}
         applyFilters={applyFilters}
       />
-      <Gallery catData={catData} setCatData={setCatData} />
+      <Gallery catData={catData} />
       <Footer />
     </div>
   );

@@ -1,4 +1,3 @@
-// src/components/Filters.js
 import React from 'react';
 
 const Filters = ({ minWidth, minHeight, setMinWidth, setMinHeight, applyFilters }) => {
@@ -16,7 +15,7 @@ const Filters = ({ minWidth, minHeight, setMinWidth, setMinHeight, applyFilters 
         step="50"
         value={minWidth}
         onChange={(e) => setMinWidth(e.target.value)}
-      />
+      /> &nbsp;&nbsp;
       <label htmlFor="filter-height">Filter by Height:</label>
       <input
         type="number"
@@ -25,7 +24,7 @@ const Filters = ({ minWidth, minHeight, setMinWidth, setMinHeight, applyFilters 
         step="50"
         value={minHeight}
         onChange={(e) => setMinHeight(e.target.value)}
-      />
+      /> &nbsp;
       <button onClick={handleApplyFilters}>Apply Filters</button>
     </section>
   );

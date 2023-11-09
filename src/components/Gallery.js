@@ -1,4 +1,3 @@
-// src/components/Gallery.js
 import React from 'react';
 import CatImage from './CatImage';
 

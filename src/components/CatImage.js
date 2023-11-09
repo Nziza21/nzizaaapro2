@@ -1,4 +1,3 @@
-// src/components/CatImage.js
 import React from 'react';
 
 const CatImage = ({ cat }) => {
