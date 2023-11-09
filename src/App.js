@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React, { useState } from 'react';
+import header from './components/header';
 
-function App() {
+const App = () => {
+  const [minWidth, setMinWidth] = useState('');
+  const [minHeight, setMinHeight] = useState('');
+  const [catData, setCatData] = useState([]);
+
+  const applyFilters = () => {
+    // Logic to filter catData based on minWidth and minHeight
+    // Update the state with the filtered data
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <Filters
+        minWidth={minWidth}
+        minHeight={minHeight}
+        setMinWidth={setMinWidth}
+        setMinHeight={setMinHeight}
+        applyFilters={applyFilters}
+      />
+      <Gallery catData={catData} />
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
