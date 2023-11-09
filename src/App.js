@@ -11,7 +11,6 @@ const App = () => {
   const [catData, setCatData] = useState([]);
 
   useEffect(() => {
-    // Fetch cat images from the API
     fetch('https://api.thecatapi.com/v1/images/search?format=json&limit=10')
       .then((response) => response.json())
       .then((data) => setCatData(data))
