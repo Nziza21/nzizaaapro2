@@ -16,7 +16,7 @@ const App = () => {
       .then((response) => response.json())
       .then((data) => setCatData(data))
       .catch((error) => console.error('Error fetching cat images:', error));
-  }, []); // Fetch images only once when the component mounts
+  }, []); 
 
   const applyFilters = () => {
   };
