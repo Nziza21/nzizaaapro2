@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+Cat's Images Application
+Welcome to the Cat's Images Application, a simple React-based web application that allows users to view a gallery of cat images and apply filters based on minimum width and height.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Author
+NZIZA SAMUEL
 
-## Available Scripts
+Overview
+This application fetches cat images from the The Cat API and presents them in a gallery format. Users can apply filters to display only those images that meet specific width and height criteria.
 
-In the project directory, you can run:
+Project Structure
+The project is structured into several components:
 
-### `npm start`
+Header: Displays the title of the application, "Cat's Image Gallery."
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Filters: Allows users to input minimum width and height values and apply filters to the cat images.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Gallery: Renders a gallery of cat images, utilizing the CatImage component for each image.
 
-### `npm test`
+CatImage: Displays an individual cat image with additional information such as height and width.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Footer: Displays a simple footer with the author's name and copyright information.
 
-### `npm run build`
+App: The main component that orchestrates the entire application. It fetches cat images on mount, passes data down to child components, and manages filter state.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Getting Started
+To run the Cat's Images Application locally, follow these steps:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Clone the repository:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+bash
+Copy code
+git clone [repository_url]
+Navigate to the project directory:
 
-### `npm run eject`
+bash
+Copy code
+cd cat-images-application
+Install dependencies:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+bash
+Copy code
+npm install
+Start the application:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+bash
+Copy code
+npm start
+The application will be accessible at http://localhost:3000 in your web browser.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Usage
+Upon loading the application, a gallery of cat images is displayed.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Use the filters section to input minimum width and height values.
 
-## Learn More
+Click the "Apply Filters" button to filter the cat images based on the specified criteria.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Explore the cat images and enjoy the adorable feline pictures!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Dependencies
+React
+The Cat API
+Acknowledgments
+Special thanks to The Cat API for providing the delightful cat images used in this application.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
