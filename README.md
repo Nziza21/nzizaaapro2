@@ -47,6 +47,8 @@ Copy code
 npm start
 The application will be accessible at http://localhost:3000 in your web browser.
 
+Alternatively, you can view the deployed version of the application on Netlify: Cat's Images App on Netlify
+
 Usage
 Upon loading the application, a gallery of cat images is displayed.
 
