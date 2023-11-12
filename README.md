@@ -25,25 +25,21 @@ App: The main component that orchestrates the entire application. It fetches cat
 Getting Started
 To run the Cat's Images Application locally, follow these steps:
 
-Clone the repository:
+Clone the repository: git@github.com:Nziza21/nzizaaapro2.git
 
 bash
-Copy code
-git clone [repository_url]
+git clone [git@github.com:Nziza21/nzizaaapro2.git]
 Navigate to the project directory:
 
 bash
-Copy code
 cd cat-images-application
 Install dependencies:
 
 bash
-Copy code
 npm install
 Start the application:
 
 bash
-Copy code
 npm start
 The application will be accessible at http://localhost:3000 in your web browser.
 
